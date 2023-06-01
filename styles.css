@@ -1,0 +1,791 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+header {
+    background-color: white;
+    box-shadow: 0 0 5px #8080805c;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 7rem;
+    color: #f0368d;
+}
+
+.navbar {
+    height: 90px;
+    width: 100%;
+    background-color: white;
+}
+
+#logo a{
+    font-size: 2rem;
+    color: #f0368d;
+    font-family: 'Bungee', cursive;
+    text-decoration: none;
+    transition: color 1.4s ease .25s;
+    text-shadow: 2px 1px 2px black;
+    padding: 0px 0px 0 100px;
+    float: left;
+    line-height: 80px;
+}
+
+.navbar ul {
+    float: left;
+    margin-left: 200px;
+}
+
+
+.navbar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 16px;
+}
+
+li a {
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+li a::after {
+    position: absolute;
+    background-color: #f0368d;
+    content: '';
+    width: 0%;
+    height: 2px;
+    border-radius: 10px;
+    transition: all 500ms ease;
+    bottom: 0%;
+    left: 50%;
+    color: #f0368d;
+}
+
+li a:hover::after {
+    left: 0%;
+    width: 100%;
+}
+
+li a:hover {
+    color: #f0368d;
+}
+
+
+
+#logo a:hover {
+    color: black;
+}
+
+
+.checkbtn {
+    font-size: 1.9rem;
+    float: right;
+    color: #f0368d;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+main {
+    min-height: 90vh;
+    margin: 0 130px;
+}
+
+section .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    height: 100vh;
+}
+
+.main-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #f0368d;
+    margin-top: 70px;
+}
+
+.main-content > h1 {
+    font-size: 5rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.main-content > p {
+    width: 60%;
+    font-size: 1.25rem;
+}
+
+.main-content button {
+    border-radius: 28px;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    background-color: #f0368d;
+    color: #fff;
+    border: 2px solid #f0368d;
+    margin: 20px 0;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #f0368d;
+    cursor: pointer;
+}
+
+button a:hover {
+    color:#f0368d;
+}
+
+.main-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-resume button a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+.main-resume h1 {
+    font-size: 2rem;
+    color: #f0368d;
+}
+
+.icon-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.icon-box {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.icon-box img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box a img {
+    color: #000;
+    width: 18px;
+    height: 18px;
+}
+
+#lv-lg {
+    color: red;
+}
+
+footer {
+    height: 130px;
+    text-align: center;
+    background-color: #ecebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: #000;
+}
+
+
+
+/* ABOUT ME PAGE */
+.about-me {
+    margin: 42px 150px;
+}
+
+.about-me > h2 {
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-align: center;
+    color: #f0368d;
+}
+
+.about-me > h3 {
+    font-size: 1.9rem;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+.about-skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-me > p {
+    line-height: 2;
+    padding: 10px 0;
+    font-size: 1.05rem;
+}
+
+.about-me a {
+    color: #f0368d;
+}
+
+hr {
+    border: 1px solid #f0368d;
+    margin-top: 10px;
+}
+
+.skills-logo {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.skill-tool {
+    color: #f0368d;
+}
+
+/* PROJECTS */
+
+.pj-container {
+    margin: 0 130px;
+}
+
+.pj-container h2 {
+    font-size: 2.2rem;
+    margin: 30px;
+    text-align: center;
+}
+
+.pj-lg {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 70px 0;
+}
+
+.pj-md {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pj-md h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.pj-logo img {
+    width: 430px;
+    height: 310px;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.pj-logo:hover img {
+    transform: scale(1.1);
+}
+
+
+.pj-sm {
+    padding-right: 22px;
+}
+
+.pj-sm p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.pj-sm p:last-child {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.pj-btn-1 {
+    border-radius: 28px;
+    padding: 10px 42px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #f0368d;
+    border: 2px solid #f0368d;
+    font-weight: bold;
+    margin-right: 18px;
+}
+
+.pj-btn-1:hover {
+    background-color: #f0368d;
+    color: #fff;
+}
+
+.pj-btn-2 {
+    border-radius: 28px;
+    padding: 10px 42px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+    font-weight: bold;
+}
+
+.pj-btn-2:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.fa-solid {
+    margin-left: 6px;
+}
+
+#pj-btn-3 {
+    padding: 8px 24px;
+    /* text-shadow: 1px 1px 2px #000; */
+    border-radius: 28px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    font-weight: bold;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+#pj-btn-3:hover {
+    color: #fff;
+    background-color: #000;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.btn-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/**** LARGER DEVICES ONLY ****/
+@media (min-width: 1200px)  {
+
+    li a {
+        
+        font-size: 1.6rem;
+    }
+
+    main {
+        margin: 0px;
+    }
+}
+
+
+
+
+/* *** MEDIUM DEVICES ONLY *** */
+@media (min-width: 992px) and (max-width: 1199px) {
+    main {
+        margin: 0px;
+    }
+
+    .pj-lg {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .pj-container {
+        margin: 0 100px;
+    }
+    
+}
+
+
+/**** SMALL DEVICES ONLY ****/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .main-content > h1 {
+    font-size: 4rem;
+    text-shadow: 1px 1px 2px #000;
+    }
+
+    .main-content > p {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .pj-lg {
+        flex-wrap: wrap;
+    }
+
+    main {
+        margin: 0px;
+    }
+
+    .skills-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .pj-logo img {
+        width: 90%;
+        height: 90%;
+    }
+
+
+
+    .checkbtn {
+        display: block;
+        margin-top: 20px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #0b0a03;
+        color: white;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar ul {
+        float: left;
+        margin-left: 0;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 16px;
+        line-height: 40px;
+    }
+
+    .navbar ul li a {
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    .navbar ul li a:hover, .navbar ul li a.active {
+        color: #f0368d;
+        width: 100%;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+}
+
+
+
+/**** EXTRA SMALL DEVICES ONLY ****/
+@media (max-width: 767px) {
+        .main-content > h1 {
+        font-size: 3rem;
+        }
+
+        .main-content > p {
+            width: 90%;
+            font-size: 1.1rem;
+        }
+
+        .main-content img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .main-content button {
+            border-radius: 28px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        main {
+            margin: 0 20px;
+        }
+
+        header .navbar {
+            padding: 10px 7%;
+        }
+
+        ul li {
+            display: none;
+        }
+
+        .about-me {
+            margin: 42px 40px;
+        }
+
+        .skills-logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .pj-lg {
+            flex-wrap: wrap;
+        }
+
+        .pj-logo img {
+            width: 90%;
+            height: 90%;
+        }
+
+        .pj-btn-1 {
+            padding: 8px 28px;
+            font-size: .85rem;
+        }
+
+        .pj-btn-2 {
+            padding: 8px 28px;
+            font-size: .85rem;
+        }
+
+        .pj-container {
+            margin: 0 40px;
+        }
+
+        .checkbtn {
+            display: block;
+        }
+
+        #logo a{
+            font-size: 1.4rem;
+            color: #f0368d;
+            font-family: 'Bungee', cursive;
+            text-decoration: none;
+            transition: color 1.4s ease .25s;
+            text-shadow: 2px 1px 2px black;
+            padding: 0px 0px 0 50px;
+        }
+
+
+        .checkbtn {
+            display: block;
+            margin-top: 20px;
+        }
+    
+        ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #0b0a03;
+            color: white;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+    
+        .navbar ul {
+            float: left;
+            margin-left: 0;
+        }
+    
+        .navbar ul li {
+            display: block;
+            margin: 16px;
+            line-height: 40px;
+        }
+    
+        .navbar ul li a {
+            font-size: 1.3rem;
+            color: white;
+        }
+    
+        .navbar ul li a:hover, .navbar ul li a.active {
+            color: #f0368d;
+            width: 100%;
+        }
+    
+        #check:checked ~ ul {
+            left: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: gold;
+        }
+
+        .main-resume h1 {
+            font-size: 1.5rem;
+        }
+
+
+}
+
+/****SMALLEST DEVICE ****/
+
+@media (max-width: 450px) {
+    main {
+        margin: 0px;
+    }
+
+    #logo a{
+        font-size: 1.4rem;
+        color: #f0368d;
+        font-family: 'Bungee', cursive;
+    }
+
+    .navbar button {
+        border-radius: 28px;
+        padding: 5px 14px;
+        font-size: .95rem;
+    }
+
+    #logo a{
+        font-size: 1.3rem;
+        padding: 0px 0px 0 5px;
+    }
+
+    .skills-logo img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .skills-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .skill-logo p {
+        font-size: rem;
+    }
+
+    .about-me {
+        margin: 32px 30px;
+    }
+
+    .about-me > h2 {
+        font-size: 1rem;
+    }
+    
+    .about-me > h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-me > p {
+        line-height: 1.9;
+        font-size: .8rem;
+    }
+
+    .pj-btn-1 {
+        padding: 5px 18px;
+        font-size: .7rem;
+    }
+
+    .pj-btn-2 {
+        padding: 5px 18px;
+        font-size: .7rem;
+    }
+
+    .pj-container {
+        margin: 0 20px;
+    }
+
+    .pj-sm p:first-child {
+        font-size: 1rem;
+    }
+    
+    .pj-sm p:last-child {
+        font-size: .85rem;
+    }
+
+    .pj-container h2 {
+        font-size: 2rem;
+        margin: 30px 0 0 0;
+    }
+
+    .pj-md h3 {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: red;
+    }
+   
+
+    .about-me > h2 {
+        font-size: 1rem;
+    }
+    
+    .about-me > h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-me > p {
+        line-height: 1.9;
+        font-size: .8rem;
+    }
+
+    .pj-btn-1 {
+        padding: 5px 18px;
+        font-size: .7rem;
+    }
+
+    .pj-btn-2 {
+        padding: 5px 18px;
+        font-size: .7rem;
+    }
+
+    .pj-container {
+        margin: 0 20px;
+    }
+
+    .pj-sm p:first-child {
+        font-size: 1rem;
+    }
+    
+    .pj-sm p:last-child {
+        font-size: .85rem;
+    }
+
+    .pj-container h2 {
+        font-size: 2rem;
+        margin: 30px 0 0 0;
+    }
+
+    .pj-md h3 {
+        font-size: 1.5rem;
+    }
+}
