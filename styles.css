@@ -110,6 +110,7 @@ main {
     margin: 0 130px;
 }
 
+
 section .main-content {
     display: flex;
     flex-direction: column;
@@ -171,7 +172,26 @@ button a:hover {
     color: black;
 }
 
+#my-works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.main-content .work {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .work button {
+    width: 190px;
+}
+
+.main-content button a {
+    text-decoration: none;
+    color: #000;
+}
 
 
 
@@ -659,6 +679,7 @@ hr {
     main {
         margin: 0px;
     }
+
 
     #logo a{
         font-size: 1.4rem;
